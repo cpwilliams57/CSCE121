@@ -1,0 +1,22 @@
+    while (bulls != numdigits){
+        string guess = "";
+        cin >> guess;
+        bulls = 0;
+        cows = 0;
+        
+        //checks for bulls and outputs #of bulls
+        for( i = 0; i < numdigits; ++i){
+            for( j = 0; j < numdigits; ++j){
+                if(guess.at(j) == generatednum.at(i)){
+                    if( j == i){
+                        ++bulls;
+                    }
+                    else if(j != i){
+                        ++cows;
+                    }
+                }
+            }
+        }
+        cout << bulls << " bulls" << endl;
+        cout << cows << " cows" << endl;
+    }
